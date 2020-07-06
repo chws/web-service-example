@@ -1,6 +1,5 @@
 package com.jojoldu.book.springboot.web.dto;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
