@@ -4,6 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,13 +20,12 @@ public class LogController {
         LOG.debug(">>> debug log");
         LOG.info(">>> info log");
         LOG.warn(">>> warn log");
-        LOG.error(">>> error log");
     }
 
-    @RequestMapping("/error")
+    @RequestMapping("/error-log")
     @ResponseBody
     public void logError() {
-        LOG.error(">>> error");
+        LOG.error(">>> error log");
     }
 
 //    @Scheduled(fixedDelay = 1000)
