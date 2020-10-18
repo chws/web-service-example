@@ -22,13 +22,19 @@ public class LogController {
         LOG.error(">>> error log");
     }
 
-    @Scheduled(fixedDelay = 1000)
-    public void logErrorScheduled() {
-        LOG.error(">>> error scheduled");
+    @RequestMapping("/error")
+    @ResponseBody
+    public void logError() {
+        LOG.error(">>> error");
     }
 
-    @Scheduled(fixedDelay = 1500)
-    public void logInfoScheduled() {
-        LOG.info(">>> info scheduled");
-    }
+//    @Scheduled(fixedDelay = 1000)
+//    public void logErrorScheduled() {
+//        LOG.error(">>> error scheduled");
+//    }
+//
+//    @Scheduled(fixedDelay = 1500)
+//    public void logInfoScheduled() {
+//        LOG.info(">>> info scheduled");
+//    }
 }
